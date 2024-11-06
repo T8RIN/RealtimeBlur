@@ -7,6 +7,20 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    id("maven-publish")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("mavenJava") {
+                groupId = "com.github.t8rin"
+                artifactId = "realtimeblur"
+                version = "1.0.1"
+                from(components["release"])
+            }
+        }
+    }
 }
 
 android {
