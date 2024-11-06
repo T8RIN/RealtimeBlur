@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId = "dev.serhiiyaremych.imla"
-        minSdk = 23
+        minSdk = 21
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
